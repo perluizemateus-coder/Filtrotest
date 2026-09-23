@@ -1,0 +1,18 @@
+.div-card{
+    margin: 30px;
+    gap: 20px;
+    border-radius: 30px;
+    height: 150px;
+    border: solid 5px;
+    border-color: blueviolet;
+    background-color: #0000ff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+#divCatalogo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}

@@ -4,15 +4,36 @@ const  produtos = [['Notebook thinkpad', 'i5 core decima geracao', 'Notebook', 2
     ['Samsung galaxy A3', 'telefone novo de ultima geracao', 'Celular', 4999.89],
     ['Iphone 13 pro max', 'telefone nvo de ultima geracao', 'Celular', 3499.00],
     ['Mouse dell', 'mouse cabo usb novo', 'Mouse', 15.99]
-
-
 ];
 
-const divCatalogo = document.getElementById('j');
+const divCatalogo = document.getElementById('divCatalogo');
 
+function mostrarCatalogo(event){
+    if(event) event.preventDefault();
+
+    const filtro = document.getElementById('filtro')
+        .value()
+        .trim()
+        .toLowerCase();
+
+ let pFiltrados =[];
+
+divCatalogo.innerHTML = '';
+
+if(filtro !== ''){
+    pFiltrados = produtos
+    .filter(produoto => produto[2].toLowerCase() === filro);
+} else {
+pFiltrados = produtos;
+}
+if(pFiltrados.length === 0){
+    divCatalogo.innerHTML = `<p class="filtro-erro">NÃO HÁ PRODUTOS NESTA CATEGORIA<p>`;
+    return;
+}
+};
 produtos.forEach((produto => {
     let divCard = document.createElement('div');
-    divCard.classList.add('div-card');
+    divCard.className='div-card';
 
     const h3 = document.createElement('h3');
     h3.innerHTML = produto[0];
@@ -29,6 +50,7 @@ produtos.forEach((produto => {
 
     const spanPreco = document.createElement('span');
     spanPreco.classList.add('span-Preco');
+    spanCategoria.innerHTML = `R$ ${produto[3]},00`;
 
     divCard.appendChild(h3);
     divCard.appendChild(p);
@@ -40,18 +62,6 @@ produtos.forEach((produto => {
 })); 
 
 
-function mostrarCatalogo(event){
-    if(event) event.preventDefault();
-
-        divCatalogo.innerHTML = '';
-
-let filtro
-
-if(filtro !== ''){
-    
-};
-
-}
 
 
 
