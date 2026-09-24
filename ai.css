@@ -27,3 +27,18 @@
 body {
     background-color: rgb(244, 244, 244);
 }
+
+.pesquisa {
+ text-align: center;
+ color: rgb(56, 1, 1);
+}
+
+.title {
+    text-align: center;
+ color: rgb(56, 1, 1);
+ background-color: rgb(193, 242, 226);
+padding: 1rem;
+margin: 10px;
+
+}
+
