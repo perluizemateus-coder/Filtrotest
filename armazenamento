@@ -21,3 +21,7 @@ if(pFiltrados.length === 0){
     return;
 }
 };
+
+produtos.forEach((value, index) => {
+const tagName = 
+    });

@@ -1,13 +1,14 @@
 .div-card{
     margin: 30px;
     gap: 20px;
-    border-radius: 30px;
-    height: 150px;
+    
+    height: 250px;
     border: solid 5px;
-    border-color: blueviolet;
-    background-color: #0000ff;
+    border-color: rgb(164, 124, 199);
+    background-color: #cdcdfa;
     padding: 20px;
     text-align: center;
+    width: 150px;
 }
 
 
@@ -15,4 +16,14 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.img {
+    width: 120px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+body {
+    background-color: rgb(244, 244, 244);
 }
