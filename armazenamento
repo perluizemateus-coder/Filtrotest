@@ -1,0 +1,23 @@
+function mostrarCatalogo(event){
+    if(event) event.preventDefault();
+
+    const filtro = document.getElementById('filtro')
+        .value()
+        .trim()
+        .toLowerCase();
+
+ let pFiltrados =[];
+
+divCatalogo.innerHTML = '';
+
+if(filtro !== ''){
+    pFiltrados = produtos
+    .filter(produoto => produto[2].toLowerCase() === filro);
+} else {
+pFiltrados = produtos;
+}
+if(pFiltrados.length === 0){
+    divCatalogo.innerHTML = `<p class="filtro-erro">NÃO HÁ PRODUTOS NESTA CATEGORIA<p>`;
+    return;
+}
+};

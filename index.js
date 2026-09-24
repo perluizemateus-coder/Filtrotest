@@ -9,20 +9,22 @@ const  produtos = [['Notebook thinkpad', 'i5 core decima geracao', 'Notebook', 2
 const divCatalogo = document.getElementById('divCatalogo');
 
 function mostrarCatalogo(event){
+
     if(event) event.preventDefault();
+    console.log(document.getElementById('filtro'));
 
     const filtro = document.getElementById('filtro')
-        .value()
+        .value
         .trim()
         .toLowerCase();
 
  let pFiltrados =[];
 
-divCatalogo.innerHTML = '';
+ divCatalogo.innerHTML = '';
 
 if(filtro !== ''){
     pFiltrados = produtos
-    .filter(produoto => produto[2].toLowerCase() === filro);
+    .filter(produto => produto[2].toLowerCase() === filtro);
 } else {
 pFiltrados = produtos;
 }
@@ -30,8 +32,10 @@ if(pFiltrados.length === 0){
     divCatalogo.innerHTML = `<p class="filtro-erro">NÃO HÁ PRODUTOS NESTA CATEGORIA<p>`;
     return;
 }
-};
-produtos.forEach((produto => {
+
+
+
+pFiltrados.forEach((produto) => {
     let divCard = document.createElement('div');
     divCard.className='div-card';
 
@@ -59,7 +63,11 @@ produtos.forEach((produto => {
   
     divCatalogo.appendChild(divCard);
 
-})); 
+}); 
+
+};
+
+mostrarCatalogo();
 
 
 
